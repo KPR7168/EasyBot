@@ -69,6 +69,9 @@ clickXPath('/html/body/ul/li[1]')
 #select property access
 clickXPath('//*[@id="access-row"]/div[1]/div/div/div[1]/label')
 
+#type in access instruction
+sendKeyXPath('I dont know what to put in access instruction so here is random text just for testing.', '//*[@id="access_notes"]')
+
 #click NEXT
 clickXPath('//*[@id="booking"]/div/div[1]/div[2]/div/form/div[2]/div/button')
 time.sleep(1)
