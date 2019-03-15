@@ -44,7 +44,7 @@ time.sleep(0.5)
 clickXPath('//*[@id="cart"]/div/div/div[6]/div/button')
 
 #select NEXT
-clickXPath('//*[@id="booking"]/div/div[1]/div[2]/div/form/div[4]/div/button')
+clickXPath('//*[@id="booking"]/div/div[1]/div[2]/div/form/div[5]/div/button')
 
 #toggle calendar
 clickXPath('//*[@id="start_at"]')
@@ -105,3 +105,4 @@ clickXPath('//*[@id="container"]/section/span[2]/div/div/main/form/nav/div/div/d
 
 time.sleep(20)
 driver.close()
+print('Successfully create new booking in UrbanYou!')
