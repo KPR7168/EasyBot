@@ -23,10 +23,10 @@ driver.find_element_by_id('btn-book-now-header').click()
 time.sleep(0.5)
 
 #select cleaning
-clickXPath('//*[@id="icons"]/div[1]/a/div')
+clickXPath('//*[@id="cleaning-button"]')
 
 #select end of least
-clickXPath('//*[@id="icons"]/div[3]/a/div')
+clickXPath('//*[@id="eol-cleaning-button"]')
 time.sleep(1)
 
 #type in postcode
@@ -47,6 +47,7 @@ clickXPath('//*[@id="cart"]/div/div/div[6]/div/button')
 clickXPath('//*[@id="booking"]/div/div[1]/div[2]/div/form/div[5]/div/button')
 
 #toggle calendar
+time.sleep(0.5)
 clickXPath('//*[@id="start_at"]')
 
 #select tomorrow date
@@ -63,8 +64,16 @@ clickXPath('//*[@id="start_time"]/option[4]')
 #type in address
 address = driver.find_element_by_xpath('//*[@id="property_address"]')
 address.send_keys('120 Sussex Street, SYDNEY NSW 2000')
+
+#select try the full form
 time.sleep(2)
-clickXPath('/html/body/ul/li[1]')
+clickXPath('//*[@id="booking"]/div/div[1]/div[2]/div/form/div[1]/div/div[3]/div[1]/div[1]/div/small[3]/span/a')
+
+#fill in suburb
+sendKeyXPath('Sydney', '//*[@id="property_suburb"]')
+
+#fill in state
+sendKeyXPath('NSW', '//*[@id="property_state"]')
 
 #select property access
 clickXPath('//*[@id="access-row"]/div[1]/div/div/div[1]/label')
