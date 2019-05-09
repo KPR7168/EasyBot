@@ -19,7 +19,7 @@ def sendKeyXPath(key, xpath):
     element.send_keys(key)
 
 #select book now
-driver.find_element_by_id('btn-book-now-header').click()
+clickXPath('//*[@id="account-access"]/li[2]/a')
 time.sleep(0.5)
 
 #select cleaning
