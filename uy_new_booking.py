@@ -23,10 +23,10 @@ clickXPath('//*[@id="account-access"]/li[2]/a')
 time.sleep(0.5)
 
 #select cleaning
-clickXPath('//*[@id="cleaning-button"]')
+clickXPath('//*[@id="icons"]/div[1]/a/div/h2')
 
 #select end of least
-clickXPath('//*[@id="eol-cleaning-button"]')
+clickXPath('//*[@id="icons"]/div[3]/a/div/h2')
 time.sleep(1)
 
 #type in postcode
@@ -67,16 +67,16 @@ address.send_keys('120 Sussex Street, SYDNEY NSW 2000')
 
 #select try the full form
 time.sleep(2)
-clickXPath('//*[@id="booking"]/div/div[1]/div[2]/div/form/div[1]/div/div[3]/div[1]/div[1]/div/small[3]/span/a')
+clickXPath('/html/body/ul/li[1]/a')
 
 #fill in suburb
-sendKeyXPath('Sydney', '//*[@id="property_suburb"]')
+# sendKeyXPath('Sydney', '//*[@id="property_suburb"]')
 
 #fill in state
-sendKeyXPath('NSW', '//*[@id="property_state"]')
+# sendKeyXPath('NSW', '//*[@id="property_state"]')
 
 #select property access
-clickXPath('//*[@id="access-row"]/div[1]/div/div/div[1]/label')
+clickXPath('//*[@id="access-row"]/div[1]/div/div/div[1]/label/span[2]')
 
 #type in access instruction
 sendKeyXPath('I dont know what to put in access instruction so here is random text just for testing.', '//*[@id="access_notes"]')
